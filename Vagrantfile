@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
     azure.resource_group_name = 'vagrant'
   end
 
-  config.vm.define "mysqlserver" do |mysqlserver|
+  config.vm.define "mysqlserver", primary: true do |mysqlserver|
 
     mysqlserver.vm.provider "azure" do |azure|
       azure.vm_name = "mysqlserver"
